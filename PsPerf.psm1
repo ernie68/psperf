@@ -1,10 +1,11 @@
 ﻿Add-Type @"
     using System;
+    using System.Diagnostics;
     namespace Perf.PerfCounters {
         public struct Category {
            public string CategoryName;
            public string CategoryHelp;
-           public System.Diagnostics.PerformanceCounterCategoryType CategoryType;
+           public [System.Diagnostics.PerformanceCounterCategoryType] CategoryType;
            public string InstanceNames;
         }
         public struct Counter {
